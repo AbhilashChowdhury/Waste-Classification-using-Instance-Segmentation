@@ -18,7 +18,7 @@ os.makedirs(OUTPUT_DIR, exist_ok=True)
 model = YOLO("best.pt")  # Make sure best.pt is in the same folder or provide full path
 
 # Streamlit title
-st.title("♻️ Waste Segmentation using YOLOv8")
+st.title("♻️ Waste Classification")
 
 # Upload file
 uploaded_file = st.file_uploader("📤 Upload a waste image", type=["jpg"])
@@ -58,3 +58,4 @@ if uploaded_file is not None:
         st.image(annotated_img, caption="YOLOv8 Segmentation", use_container_width=True)
     else:
         st.warning("Annotated image not found.")
+
