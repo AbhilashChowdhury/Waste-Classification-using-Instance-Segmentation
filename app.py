@@ -21,7 +21,7 @@ model = YOLO("best.pt")  # Make sure best.pt is in the same folder or provide fu
 st.title("♻️ Waste Classification")
 
 # Upload file
-uploaded_file = st.file_uploader("📤 Upload a waste image", type=["jpg"])
+uploaded_file = st.file_uploader("📤 Upload a waste image", type=["jpg , jpeg , png"])
 
 if uploaded_file is not None:
     # Load image and convert if needed
@@ -58,4 +58,5 @@ if uploaded_file is not None:
         st.image(annotated_img, caption="YOLOv8 Segmentation", use_container_width=True)
     else:
         st.warning("Annotated image not found.")
+
 
